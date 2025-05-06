@@ -1,10 +1,10 @@
-package ubsocial.com.proj1;
+package ubsocial.com.projeto1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Proj1ApplicationTests {
+class Projeto1ApplicationTests {
 
 	@Test
 	void contextLoads() {

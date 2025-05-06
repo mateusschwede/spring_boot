@@ -1,4 +1,4 @@
-package ubsocial.com.proj1.controller;
+package ubsocial.com.projeto1.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ public class CalendarController {
 
     @GetMapping("/tomorrow")
     public String tomorrow() {
-        return "Amanhã é " + java.time.LocalDate.now().plusDays(1);
+        return "Amanhã será " + java.time.LocalDate.now().plusDays(1);
     }
 
 }
