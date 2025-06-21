@@ -69,6 +69,7 @@ public class PlanoResource {
         Plano planoAux = optional.get();
         planoAux.setNome(plano.getNome());
         planoAux.setValorPorMinuto(plano.getValorPorMinuto());
+        planoRepository.save(planoAux);
         return new ResponseEntity<Plano>(planoAux, HttpStatus.OK);
     }
 
