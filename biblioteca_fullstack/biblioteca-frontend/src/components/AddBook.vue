@@ -43,7 +43,6 @@ export default defineComponent({
     data() {
         return {
             book: {
-
                 title: "",
                 author: "",
                 published_date: new Date(),

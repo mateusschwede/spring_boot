@@ -1,23 +1,25 @@
 import http from "@/http-common";
+import Book from "@/types/Book";
+import ResponseData from "@/types/ResponseData";
 
 class BookDataService {
-    getAll(): Promise<any> {
+    getAll(): Promise<ResponseData> {
         return http.get("/books");
     }
 
-    get(id: number): Promise<any> {
+    get(id: number): Promise<ResponseData> {
         return http.get(`/books/${id}`);
     }
 
-    create(data: any): Promise<any> {
+    create(data: Partial<Book>): Promise<ResponseData> {
         return http.post("/books", data);
     }
 
-    update(id: number, data: any): Promise<any> {
+    update(id: number, data: Partial<Book>): Promise<ResponseData> {
         return http.put(`/books/${id}`, data);
     }
 
-    delete(id: number): Promise<any> {
+    delete(id: number): Promise<ResponseData> {
         return http.delete(`/books/${id}`);
     }
 }
