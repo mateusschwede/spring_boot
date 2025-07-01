@@ -12,7 +12,7 @@ class LivroResource(private val livroRepository: LivroRepository) {
 
     @GetMapping
     fun getAll(): List<Livro> = livroRepository.findAll()
-
+    
     @GetMapping("/{id}")
     fun getById(@PathVariable id: Long): ResponseEntity<Livro> {
         val livro = livroRepository.findById(id)
@@ -31,7 +31,7 @@ class LivroResource(private val livroRepository: LivroRepository) {
         val updated = optional.get().copy(
             title = livro.title,
             author = livro.author,
-            publishedDate = livro.publishedDate,
+            published_date = livro.published_date,
             isbn = livro.isbn,
             pages = livro.pages,
             cover = livro.cover,

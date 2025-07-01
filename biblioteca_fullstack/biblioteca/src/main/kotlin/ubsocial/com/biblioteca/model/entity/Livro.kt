@@ -25,7 +25,7 @@ data class Livro(
     @field:NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "published_date")
-    val publishedDate: LocalDate = LocalDate.now(),
+    val published_date: LocalDate = LocalDate.now(),
 
     @field:NotBlank
     @field:Size(min = 13, max = 13, message = "ISBN precisa ter 13 caracteres")
@@ -34,7 +34,7 @@ data class Livro(
 
     val pages: Int = 0,
 
-    @field:Size(min = 1, max = 255, message = "Gênero precisa ter entre 1 e 255 caracteres")
+    @field:Size(min = 1, max = 255, message = "Capa/Gênero precisa ter entre 1 e 255 caracteres")
     @Column(length = 255)
     val cover: String? = null,
 
